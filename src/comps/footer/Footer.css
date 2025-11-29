@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  margin-top: auto;
+  padding: 32px 0;
+}
+
+.footer-shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -32px;
+  height: 96px;
+  background: linear-gradient(0deg, rgba(88, 28, 135, 0.6) 0%, rgba(107, 33, 168, 0.4) 50%, transparent 100%);
+  filter: blur(40px);
+  pointer-events: none;
+}

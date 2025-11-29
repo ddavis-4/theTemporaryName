@@ -1,0 +1,85 @@
+.holder-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.holder-arrow {
+  z-index: 10;
+  padding: 16px;
+  border-radius: 50%;
+  background: rgba(88, 28, 135, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.holder-arrow:hover {
+  background: rgba(109, 40, 217, 0.7);
+  transform: scale(1.1);
+}
+
+.holder-cards {
+  position: relative;
+  width: 1000px;
+  height: 384px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder-card-wrapper {
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.holder-card-center {
+  transform: translateX(0) scale(1);
+  z-index: 30;
+  opacity: 1;
+}
+
+.holder-card-left {
+  transform: translateX(-380px) scale(0.85);
+  z-index: 20;
+  opacity: 0.6;
+}
+
+.holder-card-right {
+  transform: translateX(380px) scale(0.85);
+  z-index: 20;
+  opacity: 0.6;
+}
+
+.holder-card-hidden {
+  transform: translateX(0) scale(0.7);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.holder-indicators {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.holder-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(88, 28, 135, 0.5);
+  transition: all 0.3s ease;
+}
+
+.holder-indicator-active {
+  width: 32px;
+  background: rgba(192, 132, 252, 1);
+}
