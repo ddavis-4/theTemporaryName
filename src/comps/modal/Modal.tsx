@@ -30,16 +30,26 @@ export const Modal = ({ card, onClose, fortuneResult, isLoading, error }: ModalP
         <div className="modal-body">
           <h2 className="modal-title">{card.title}</h2>
 
-          <div className="modal-loading">
-            <div className="modal-loading-dots">
-              <div className="modal-loading-dot"></div>
-              <div className="modal-loading-dot"></div>
-              <div className="modal-loading-dot"></div>
+          {isLoading && (
+            <div className="modal-loading">
+              <div className="modal-loading-dots">
+                <div className="modal-loading-dot"></div>
+                <div className="modal-loading-dot"></div>
+                <div className="modal-loading-dot"></div>
+              </div>
+              <p className="modal-loading-text">
+                Consulting the mystic forces...
+              </p>
             </div>
-            <p className="modal-loading-text">
-              Consulting the mystic forces...
-            </p>
-          </div>
+          )}
+
+          {!isLoading && error && (
+            <p className="modal-error">{error}</p>
+          )}
+
+          {!isLoading && fortuneResult && (
+            <p className="modal-fortune">{fortuneResult}</p>
+          )}
         </div>
       </div>
     </div>
