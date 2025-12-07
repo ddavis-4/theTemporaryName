@@ -9,7 +9,7 @@
   --bg-gradient-mid: #1e293b;
   --bg-gradient-end: #334155;
   --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.87); /* weird ass ai*/
 }
 
 :root[data-theme="light"] {
@@ -30,8 +30,8 @@ body {
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(100deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
-  transition: background 0.3s ease;
+  background: linear-gradient(100deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%); /*shebangbang*/
+  transition: background 0.67s ease;
 }
 
 .app-container {
