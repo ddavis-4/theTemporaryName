@@ -16,7 +16,6 @@
   
 :root[data-theme="dark"] .footer-shadow {
   background: linear-gradient(0deg, rgba(88, 28, 135, 0.6) 0%, rgba(107, 33, 168, 0.4) 50%, transparent 100%);
-
 }
 
 :root[data-theme="light"] .footer-shadow {
