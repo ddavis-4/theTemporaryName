@@ -19,7 +19,8 @@ export const useFortune = (card: Card | null, isOpen: boolean): UseFortune => {
       try {
         const requestBody: FortuneAPIRequest = {
           fortuneType: card.id,
-          title: card.title
+          title: card.title,
+          prompt: card.prompt,
         };
 
         const response = await fetch('/api/fortune', {

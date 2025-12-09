@@ -3,6 +3,7 @@
 export interface Card {
 	id: number;
 	title: string;
+  promt: string;
 	image: string;
 	color?: string;
 }
@@ -10,6 +11,7 @@ export interface Card {
 export interface FortuneAPIRequest {
   fortuneType: number;
   title: string;
+  prompt: string;
 }
 
 export interface FortuneAPIResponse {
