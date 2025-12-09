@@ -7,24 +7,6 @@
   padding: 32px 0;
 }
 
-.holder-arrow {
-  z-index: 10;
-  padding: 16px;
-  border-radius: 50%;
-  background: rgba(88, 28, 135, 0.5);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.holder-arrow:hover {
-  background: rgba(109, 40, 217, 0.7);
-  transform: scale(1.1);
-}
-
 .holder-cards {
   position: relative;
   width: 1000px;
@@ -76,7 +58,7 @@
   height: 8px;
   border-radius: 50%;
   background: rgba(88, 28, 135, 0.5);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .holder-indicator-active {
