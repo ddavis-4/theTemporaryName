@@ -1,7 +1,5 @@
-//! gobal types
+//! Gobal types
 
-
-// card type
 export interface Card {
 	id: number;
 	title: string;
