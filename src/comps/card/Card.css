@@ -24,6 +24,13 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
+/*todo: ashley add you style here*/
+/*:root[data-theme="special Ashley style"] .card {
+  background:;
+  border:;
+  box-shadow: ;
+}
+*/
 .card-active {
   transform: scale(1);
   opacity: 1;

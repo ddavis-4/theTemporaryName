@@ -3,7 +3,7 @@ import type { Card } from '../../types/types';
 import './Modal.css';
 
 interface ModalProps {
-  card: Card | null;
+  card: Card;
   onClose: () => void;
   fortuneResult?: string;
   isLoading?: boolean;
@@ -11,8 +11,6 @@ interface ModalProps {
 }
 
 export const Modal = ({ card, onClose, fortuneResult, isLoading, error }: ModalProps) => {
-  if (!card) return null;
-
   return (
     <div className="modal-overlay">
       <div className="modal-backdrop" onClick={onClose}></div>

@@ -9,8 +9,6 @@ import './App.css'
 
 export default function App() {
   const { theme } = useTheme();
-
-  // Modal hook handles all modal and fortune logic
   const {
     selectedCard,
     isModalOpen,
@@ -21,7 +19,6 @@ export default function App() {
     handleCloseModal,
   } = useModal();
 
-  // Choose card data based on current theme
   const cards = theme === 'dark' ? darkModeCards : lightModeCards;
 
   return (
@@ -33,7 +30,7 @@ export default function App() {
         </div>
         <Footer />
 
-        {isModalOpen && (
+        {isModalOpen && selectedCard && (
           <Modal 
             card={selectedCard} 
             onClose={handleCloseModal}
