@@ -9,7 +9,11 @@ export const Header = () => {
 		<div className="header">
 			<ThemeToggle />
 			<h1 className="header-title">
-				{theme === 'dark' ? 'zZThe Dark OracleZz' : 'zZThe Light OracleZz'}
+				{theme === 'dark' 
+                    ? 'zZThe Dark OracleZz' 
+                    : theme === 'princess' 
+                        ? 'zZThe Princess OracleZz' 
+                        : 'zZThe Light OracleZz'}
 			</h1>
 			<div className="header-glow"></div>
 		</div>

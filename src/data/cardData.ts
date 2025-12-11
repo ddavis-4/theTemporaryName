@@ -91,3 +91,12 @@ export const darkModeCards: Card[] = [
 		color: "",
 	},
 ];
+
+export const princessCards: Card[] = [
+	{
+		id: 1,
+		title: "Princess Card 1",
+		prompt: " generate 2 sentences " ,
+		image: "placeholder",
+	},
+];

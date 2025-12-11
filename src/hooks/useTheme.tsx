@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Theme = 'light' | 'dark';
+type Theme = 'light' | 'dark' | 'princess';
 
 interface ThemeContextType {
   theme: Theme;
@@ -20,8 +20,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
+  // { changed code }
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    const themes: Theme[] = ['light', 'dark', 'princess'];
+    setTheme(prev => {
+      const idx = themes.indexOf(prev);
+      return themes[(idx + 1) % themes.length];
+    });
   };
 
   return (

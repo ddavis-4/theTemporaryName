@@ -3,7 +3,7 @@
 export interface Card {
 	id: number;
 	title: string;
-  promt: string;
+  prompt: string;
 	image: string;
 	color?: string;
 }
