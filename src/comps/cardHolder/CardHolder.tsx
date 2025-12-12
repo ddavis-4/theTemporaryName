@@ -5,7 +5,6 @@ import type { Card } from '../../types/types';
 
 // This is also a Holder not a Carousel
 
-// Define Typescript Interface
 interface CardHolderProps {
 	cards: Card[];
 	onCardSelect?: (card: Card) => void;
@@ -35,7 +34,6 @@ export const CardHolder = ({ cards, onCardSelect }: CardHolderProps) => {
 		if (index === current) {
 			onCardSelect?.(cards[current]);
 		} else if (current === cards.length - 1 && index === 0) {
-			// At last card, clicking first card goes forward
 			toNext();
 		} else if (index < current || (current === 0 && index === cards.length - 1)) {
 			toPrevious();
@@ -58,6 +56,8 @@ export const CardHolder = ({ cards, onCardSelect }: CardHolderProps) => {
                 card={card}
                 isActive={position === 'center'}
                 onClick={() => cardClick(index)}
+                primary={card.colors.primary}
+                secondary={card.colors.secondary}
               />
             </div>
           );
