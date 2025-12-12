@@ -1,11 +1,16 @@
 //! Gobal types
 
+export interface CardColors {
+  primary: string;
+  secondary: string;
+}
+
 export interface Card {
 	id: number;
 	title: string;
   prompt: string;
 	image: string;
-	color?: string;
+	colors: CardColors;
 }
 
 export interface FortuneAPIRequest {

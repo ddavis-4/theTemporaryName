@@ -11,11 +11,19 @@ interface ModalProps {
 }
 
 export const Modal = ({ card, onClose, fortuneResult, isLoading, error }: ModalProps) => {
+  const { primary, secondary } = card.colors;
+
   return (
     <div className="modal-overlay">
       <div className="modal-backdrop" onClick={onClose}></div>
 
-      <div className="modal-content">
+      <div
+        className="modal-content"
+        style={{
+          '--card-primary': primary,
+          '--card-secondary': secondary,
+        } as React.CSSProperties}
+      >
         <div className="modal-image-container">
           <img
             src={card.image}
@@ -32,8 +40,8 @@ export const Modal = ({ card, onClose, fortuneResult, isLoading, error }: ModalP
             <div className="modal-loading">
               <div className="modal-loading-dots">
                 <div className="modal-loading-dot"></div>
-                <div className="modal-loading-dot"></div>
-                <div className="modal-loading-dot"></div>
+                <div className="modal-loading-dot modal-loading-dot-2"></div>
+                <div className="modal-loading-dot modal-loading-dot-3"></div>
               </div>
               <p className="modal-loading-text">
                 Consulting the mystic forces...
